@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim a Reimbursement</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li>Dashboard</li>
+            <li>My Pay Slips</li>
+            <li>Attendance</li>
+            <li>Tax Deductions</li>
+            <li class="active">Reimbursements</li>
+            <li>Documents</li>
+            <li>Help</li>
+        </ul>
+    </div>
+    <div class="main">
+        <h1>Claim a Reimbursement</h1>
+        <form id="reimbursement-form">
+            <label for="reimbursement-type">Type of reimbursement *</label>
+            <select id="reimbursement-type" required>
+                <option value="" disabled selected>Please pick a type</option>
+                <!-- Add reimbursement types here -->
+            </select>
+
+            <label for="expense-date">Expense Date *</label>
+            <input type="date" id="expense-date" value="2024-11-06" required>
+
+            <label for="description">Description</label>
+            <textarea id="description"></textarea>
+
+            <label for="amount">Amount *</label>
+            <input type="number" id="amount" required>
+
+            <label for="attachments">Supporting images or documents (max 5 MB each) *</label>
+            <input type="file" id="attachments" multiple accept=".png, .jpg, .pdf">
+
+            <button type="submit">Request Reimbursement</button>
+        </form>
+        <div class="documents">
+            <h2>FYI, here are your organization's reimbursements related documents</h2>
+            <!-- Add document list here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
